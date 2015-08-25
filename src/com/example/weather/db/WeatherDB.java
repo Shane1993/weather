@@ -71,7 +71,7 @@ public class WeatherDB {
 	{
 		List<Province> list = new ArrayList<Province>();
 		Cursor cursor = db.rawQuery(
-				"select * form Province ", null);
+				"select * from Province", null);
 			
 		while(cursor.moveToNext())
 		{
@@ -108,7 +108,7 @@ public class WeatherDB {
 	{
 		List<City> list = new ArrayList<City>();
 		Cursor cursor = db.rawQuery(
-				"select * form City where province_id = ? ", 
+				"select * from City where province_id = ? ", 
 				new String[]{String.valueOf(provinceId)});
 		
 		while(cursor.moveToNext())
@@ -147,7 +147,7 @@ public class WeatherDB {
 	{
 		List<County> list = new ArrayList<County>();
 		Cursor cursor = db.rawQuery(
-				"select * form County where city_id = ? ", 
+				"select * from County where city_id = ? ", 
 				new String[]{String.valueOf(cityId)});
 		
 		while(cursor.moveToNext())
